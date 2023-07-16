@@ -1,0 +1,18 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Detail</title>
+</head>
+<body>
+<p> Task Name: {{ data.firstName }} | <a href="{% url 'profileapp:profile_update' data.id %}">Update</a> |
+    <a href="{% url 'profileapp:profile_delete' data.id %}">Delete</a>
+</p>
+<p> Task Status: {{ data.get_gender_display }} </p>
+<p> <a href="{% url 'profileapp:profile_list' %}">View All Profile</a> |
+    <a href="{% url 'profileapp:profile_create'%}">New Profile</a>
+</p>
+</body> 
+</html>
